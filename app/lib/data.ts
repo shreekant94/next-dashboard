@@ -216,3 +216,7 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
+
+// Note: updateInvoice is implemented as a server action in `app/lib/actions.ts`.
+// The data layer should only contain read helpers. Server-side mutations live
+// in `actions.ts` to be used as server actions from client components.
